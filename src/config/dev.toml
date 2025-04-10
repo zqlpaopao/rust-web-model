@@ -1,0 +1,27 @@
+[web]
+host = "0.0.0.0:9009"
+max_age = 3600
+shutdown_timeout=10
+worker_num=3
+
+[clickhouse]
+host="tcp://admin:123456@0.0.0.0:9090/monitor?pool_min=2&pool_max=5"
+
+
+[mysql]
+host="mysql://root:meimima123@127.0.0.1:3306/test"
+max_open=10
+idle_open=3
+max_life_time=86000
+timeout=3600
+
+[log]
+debug = false
+log_path = "./log.log"
+split_path = "./target/logs/"
+chan_len=100
+log_size=100
+keep_file_num=100
+
+[url]
+cabinet = "http://xxx.com"
